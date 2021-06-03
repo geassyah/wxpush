@@ -12,9 +12,9 @@ class WXPusher:
     def __init__(self, usr, msg):
         self.base_url = 'https://qyapi.weixin.qq.com/cgi-bin/gettoken?'
         self.req_url = 'https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token='
-        self.corpid = 'xxxxxxxxx'     # 上面提到的你的企业ID
-        self.corpsecret = '_61bxxxxxxxxxxxxxx'     # 上图的Secret
-        self.agentid = 123456          # 填写你的企业ID，不加引号，是个整型常数,就是上图的AgentId
+        self.corpid = secrets.COMPANY_ID     # 上面提到的你的企业ID
+        self.corpsecret = secrets.SECRET     # 上图的Secret
+        self.agentid = secrets.AGENTID          # 填写你的企业ID，不加引号，是个整型常数,就是上图的AgentId
         self.usr = usr
         self.msg = msg
 
